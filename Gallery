@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aqua; 
+            background-size: cover;
+        }
+        h2 {
+            background-color: 00FFFFFF;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+            color: yellow;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .item {
+            position: relative;
+            border: 3px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .item-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            transition: background 0.3s;
+        }
+        .item:hover .item-text {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <h2><i><b>Image Gallery</b></i></h2>
+    <div class="container">
+        <div class="item">
+            <img src="C:\Users\91966\Pictures\Luxury-hang-tags.jpg" alt="Hang Lable">
+            <div class="item-text">Hang lable</div>
+        </div>
+        <div class="item">
+            <img src="C:\Users\91966\Pictures\canvas-printing-labels-500x500.webp" alt="canvas label">
+            <div class="item-text">canvas label</div>
+        </div>
+        <div class="item">
+            <img src="C:\Users\91966\Pictures\Twill-Tape-with-Printing.jpg" alt="twill">
+            <div class="item-text">Twill tap With painting</div>
+        </div>
+        <div class="item">
+            <img src="C:\Users\91966\Pictures\size.jpg" alt="size label">
+            <div class="item-text">size label</div>
+        </div>
+        <div class="item">
+            <img src="C:\Users\91966\Pictures\wash.jpg" alt="wash care label">
+            <div class="item-text">wash care label</div>
+        </div>
+    </div>
+</body>
+</html>
